@@ -99,23 +99,21 @@ ul.nav.navbar li a.w3ls-icon:hover {
 /*-- banner --*/  
 
 .banner-text {
-    margin: 22em 0 10em;
+    margin: 26em 0 0em;
     text-align: center;
-    background: rgba(0, 0, 0, 0.72);
-    display: inline-block;
     padding: 4em;
 }
 .banner-text h1 {
     font-size: 3.5em;
-    color: #fff;
+    color: black;
 	font-weight: 900;
 }
 .banner-text h6 {
     font-size: 1.2em;
-    color: #cac7c8;
+    color: black;
     margin-top: 1em;
     letter-spacing: 3px;
-    font-weight: 900;
+    
 }
 .video iframe{
 width: 100%;
@@ -665,7 +663,7 @@ p.agile-br {
     font-weight: 200;
 }
 .nav > li {
-    padding: 0.8em 1em;
+    padding: 1.1em 1em;
     display: block;
 }
 ul.nav.navbar li a { 
@@ -768,7 +766,7 @@ ul.address li ul.agileits-address-text li {
     font-size: 1.8em;
 }
 .nav > li {
-    padding: 0.7em 1em; 
+    padding: 1.1em 1em; 
 }
 .modal-dialog {
     width: 90%; 
@@ -850,7 +848,7 @@ ul.address li ul.agileits-address-text li {
 }
 @media(max-width:384px){
 .banner-text {
-    margin: 16.6em 0 6em;
+    margin: 23.5em 0 6em;
 }
 .banner-text h1 {
     font-size: 1.8em;
@@ -1041,6 +1039,7 @@ input.formInvalid::-webkit-input-placeholder {
     font-size: 14px;
     margin: 0;
 	font-family: Montserrat, "Open Sans", san-serif;
+    padding-bottom: 1em;
 }
 
 .footer-distributed p.footer-links {
