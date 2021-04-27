@@ -4,17 +4,27 @@ Author: Puneet Baviskar
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Punit Baviskar | Web Developer</title> 
+<title>Punit Baviskar </title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Punit sanjay Baviskar, Puneet Baviskar, Punit,Puneet,Puneetb22" />
+<meta name="description" content=" Hey there! I'm Punit Baviskar, a Developer. I am working with and JavaScript. I enjoy building web apps">
+  <meta name="author" content="Punit sanjay Baviskar">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!-- ICONS -->
+<link rel="apple-touch-icon" sizes="180x180" href="images/apl1.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/16.png">
+<link rel="manifest" href="/site.webmanifest">
+
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
 <link rel="stylesheet" href="css/lightbox.css"> 
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt" crossorigin="anonymous">
 <!-- js -->
+
 <script src="js/jquery-2.2.3.min.js"></script> 
 <script src="js/resume.js"></script>
 <!-- //js -->
@@ -34,10 +44,10 @@ Author: Puneet Baviskar
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<div class="menu">
 					<ul class="nav navbar"> 
-						<li><a href="#" class="w3ls-hover"><span data-letters="#Home">Home</span></a></li>
+						<li><a href="#" class="w3ls-hover"><span data-letters="Home">Home</span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#about" class="w3ls-hover"><span data-letters="About">About </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#skill" class="w3ls-hover"><span data-letters="Skills">Skills</span></a></li>
-						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience">Experience </span></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#experience" class="w3ls-hover"><span data-letters="Experience / Projects">Experience / Projects </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#certification" class="w3ls-hover"><span data-letters="Certification">Certifications </span></a></li>
 						<li><a href="#" data-toggle="modal" data-target="#education" class="w3ls-hover"><span data-letters="Education">Education </span></a></li>						
 						<li><a href="#" data-toggle="modal" data-target="#contact" class="w3ls-hover"><span data-letters="Contact">Contact </span></a></li> 
@@ -51,19 +61,129 @@ Author: Puneet Baviskar
 	<!-- //top-nav -->
 	
 	<!-- banner --> 
-	<div class="video" data-vide-bg="video/cv">  
+
+	<style>
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+	</style>
+
+	
+<div class="video" data-vide-bg="video/cv">  
+	
+
 		<div class="container">
 			<div class="banner-text agileinfo-text">  
 				<h1>Punit S Baviskar</h1> 
-				<h6>Web Developer / Artist</h6>
+				<h6><span
+					class="txt-rotate"
+					data-period="2000"
+					data-rotate='[ "Cloud Engineer", "Web Developer", "Software Consultant", "Artist", "" ]'></span></h6>
 			</div>  
 		</div>	
 	</div>	
+
+<script>
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
+</script>
+
 	<script src="js/jquery.vide.min.js"></script>
 	<!-- //banner --> 
 	<!-- modal-about -->
 	<div class="modal fade modal-about" id="about" tabindex="-1" role="dialog">
+		
+		<div class="bg"></div>
+			<div class="bg bg2"></div>
+			<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
+			
 			<div class="modal-content"> 
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -75,13 +195,13 @@ Author: Puneet Baviskar
 							<img src="images/img2.jpg" class="img-responsive" alt=""/>
 						</div>
 						<div class="col-md-8 about-right wthree">
-							<h3>Hi, I'm <span>Punit S Baviskar</span></h3>
-							<h4>Web Developer </h4>
+							<h3>Hi, I'm <span>Punit S. Baviskar</span></h3>
+							<h4>Cloud enthusiast | Web Developer | Technical consultant</h4>
 							<ul class="address">
 								<li>
 									<ul class="agileits-address-text ">
 										<li><b>D.O.B</b></li>
-										<li>18-06-2000</li>
+										<li>Born in 2000</li>
 									</ul>
 								</li>
 								<li>
@@ -105,7 +225,7 @@ Author: Puneet Baviskar
 								<li>
 									<ul class="agileits-address-text">
 										<li><b>WEBSITE </b></li>
-										<li><a href="">puneetb.me</a></li>
+										<li><a href="">punitbaviskar.me</a></li>
 									</ul>
 								</li>
 							</ul> 
@@ -123,6 +243,9 @@ Author: Puneet Baviskar
 	<!-- //modal-about -->
 	<!-- modal-skills -->
 	<div class="modal fade modal-skills" id="skill" tabindex="-1" role="dialog">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
 			<div class="modal-content"> 
 				<div class="modal-header">
@@ -186,6 +309,9 @@ Author: Puneet Baviskar
 	<!-- //modal-skills -->
 	<!-- modal-experience -->
 	<div class="modal fade modal-experience" id="experience" tabindex="-1" role="dialog">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
 			<div class="modal-content"> 
 				<div class="modal-header">
@@ -194,30 +320,57 @@ Author: Puneet Baviskar
 				</div>
 				<div class="modal-body modal-spa">
 					<div class="experience w3-agileits-info">  
-						<div class="experience-grids">
-							<div class="experience-left">
-								<h3>August 2020</h3>
-								<h5>Intershala.com</h5>
-							</div>
-							<div class="experience-right">
-								<h4>ISP 19 Internshala</h4>
-								<p class="experience-desc"></p>
-								<p class="experience-desc"></p>
-								<p class="experience-desc"></p>
-							</div>
+						
 							<div class="clearfix"> </div>
 						</div>				
 						<div class="experience-grids">
 							<div class="experience-left">
 								<h3>May-2020 to Till Date</h3>
-								<h5>Amity University Mumbai</h5>
+								<h5><a href="https://www.amity.edu/mumbai">Amity University Mumbai</a></h5>
 							</div>
 							<div class="experience-right">
 								<h4>Assistant Digital Marketing Manager</h4>
-								<p class="experience-desc">Working with University Digital club and managing digital platforms.</p>
+								<p class="experience-desc">-Curate content for all the official social media platforms like Instagram, 
+									Facebook, Twitter, LinkedIn, and YouTube of Amity University Mumbai. 
+								   -Design, create and produce promotional videos/content to market courses
+								   on digital platforms and independent platforms of interest. 
+								   -Leverage AdWords and several other social promotion tools to increase 
+									relevance about several courses within the community</p>
 							</div>
 							<div class="clearfix"> </div>
-						</div>					
+						</div>	
+						<h4 style="padding-top:2em;" class="modal-title">My Projects</h4>
+						<div class="experience-grids cert-grid">
+							<div class="experience-left">
+								<h3>FinByte</h3>
+								<h5>Major Project for UG</h5>
+							</div>
+							<div class="experience-right cert-image">
+								<a href=""><img alt="MCD" src="images/Proj_1.png" style="width:304px"></a> <!-- dsd -->
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
+						
+						<div class="experience-grids cert-grid">
+							<div class="experience-left">
+								<h3>UPI ID gen in Python</h3>
+								<h5>Using py string functions </h5>
+							</div>
+							<div class="experience-right cert-image">
+								<a href=""><img alt="MCD" src="images/Proj_2.png" style="width:304px"></a> <!-- dsd -->
+							</div>
+							<div  class="clearfix"> </div>
+						</div>	
+						<div class="experience-grids cert-grid">
+							<div class="experience-left">
+								<h3>Event scheduler</h3>
+								<h5>Using Js </h5>
+							</div>
+							<div class="experience-right cert-image">
+								<a href="file:///C:/Users/punee/puneet%20prsnl/Documents/Projects/timetable/dist/index.html"><img alt="MCD" src="images/prj_3.png" style="width:304px"></a> <!-- dsd -->
+							</div>
+							<div class="clearfix"> </div>
+						</div>	
 					</div>
 				</div> 
 			</div>
@@ -226,6 +379,9 @@ Author: Puneet Baviskar
 	<!-- //modal-experience -->
 	<!-- Model Certification : START -->
 	<div class="modal fade modal-experience" id="certification" tabindex="-1" role="dialog">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
 			<div class="modal-content"> 
 				<div class="modal-header">
@@ -262,6 +418,9 @@ Author: Puneet Baviskar
 	<!-- Model Certification : END -->
 	<!-- modal-education -->
 	<div class="modal fade modal-experience" id="education" tabindex="-1" role="dialog">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
 			<div class="modal-content"> 
 				<div class="modal-header w3layouts">
@@ -272,12 +431,11 @@ Author: Puneet Baviskar
 					<div class="experience">  
 						<div class="experience-grids">
 							<div class="experience-left">
-								<h3>2018- Expected June 2021<span>(3 Years Course)</span> </h3>
-								<h5> Amity University Mumbai</h5>
-							</div>
+								<h3>2018 - 2021<span>(3 Years Course)</span> </h3>
+								<h5><a href="https://www.amity.edu/mumbai">Amity University Mumbai</a></h5>							</div>
 							<div class="experience-right">
 								<h4>B.Sc Information Technology </h4>
-								<p>Credits > 7.20/10</p>
+								<p>Credits > 8.0 CGPA/10</p>
 							</div>
 							<div class="clearfix"> </div>
 						</div> 
@@ -294,8 +452,8 @@ Author: Puneet Baviskar
 						</div> 
 						<div class="experience-grids experience-grids-btm">
 							<div class="experience-left">
-								<h3>2016<span>(h)</span></h3>
-								<h5>State Board SVM</h5>
+								<h3>2016<span>(X std.)</span></h3>
+								<h5><a href="http://sahakarvidyamandir.in/">Sahaka Vidya Mandir</a></h5>
 							</div>
 							<div class="experience-right">
 								<h4>SSC</h4>
@@ -311,6 +469,9 @@ Author: Puneet Baviskar
 	<!-- //modal-education -->	
 	<!-- modal-contact -->
 	<div class="modal fade modal-contact" id="contact" tabindex="-1" role="dialog">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
 		<div class="modal-dialog" role="document">
 			<div class="modal-content"> 
 				<div class="modal-header">
@@ -321,7 +482,7 @@ Author: Puneet Baviskar
 					<div class="contact"> 
 						<div class="contact-w3lsrow">
 							<div class="col-md-6 contact-left w3-agileits">
-								<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen></iframe> -->
+								<!--iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen></iframe---> 
 								<div style="text-decoration:none; overflow:hidden; height:500px; width:500px; max-width:100%;"><div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src=""></iframe></div><a class="google-maps-code" rel="nofollow" href="" id="make-map-information">https://www.interserver-coupons.com</a><style>#my-map-canvas img{max-width:none!important;background:none!important;}</style></div><script src="" defer="defer" async="async"></script>
 							</div>
 							<div class="col-md-6 contact-right">
@@ -377,7 +538,7 @@ Author: Puneet Baviskar
 	
 	<footer class="footer-distributed">
 	 <div class="footer-left">
-            <p>Developed by Punit Baviskar</p>
+            <p>Handcrafted by Punit Baviskar</p>
         </div>
         <div class="footer-right">
             <a href="https://www.facebook.com/puneetb22" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -392,7 +553,8 @@ Author: Puneet Baviskar
           <a href="https://www.hackerrank.com/puneetb22" target="_blank"><i class="fab fa-hackerrank"></i></a>
            <a href="https://dribbble.com/puneetb22" target="_blank"><i class="fab fa-dribbble"></i></a> --->
         </div>
-       
+		<span style="color: antiquewhite;">In News Media:</span>
+        <marquee direction="left" style="color: antiquewhite;  padding-top:1em;"><a href="https://www.edexlive.com/campus/2020/jun/06/this-instagram-filter-developed-by-students-of-amity-university-is-a-hat-tip-to-frontline-workers-12472.html">Indian Express, Jun 06 2020:The campaign is called I Salute and student Puneet Baviskar is the brainchild behind it.</a></marquee>
     </footer>
 	
 	

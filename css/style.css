@@ -70,7 +70,7 @@ ul.nav.navbar li a:focus{
 .w3ls-hover span::before {
 	content: attr(data-letters);
 	position: absolute;
-	color: #000;
+	color:rgb(241, 218, 9);
 	left: 0;
 	overflow: hidden;
 	white-space: nowrap;
@@ -93,7 +93,7 @@ ul.nav.navbar li a.w3ls-icon{
     font-size: 1.2em; 
 }
 ul.nav.navbar li a.w3ls-icon:hover {
-	color:#000;
+	color:greenyellow;
 }
 /*-- //top-nav --*/
 /*-- banner --*/  
@@ -296,8 +296,11 @@ p {
     float: right;
     width: 70%;
     border: 1px solid #fff057;
-	padding: 1.5em;
+	padding: 1.26em;
 }
+
+
+
 .experience-left h3 {
     font-size: 1.8em;
     color: #fff;
@@ -705,7 +708,7 @@ h4.modal-title {
     font-size: 1.4em; 
 }
 .experience-right { 
-    padding: 1em;
+    padding: 1.26em;
 }
 .contact input[type="submit"] { 
     padding: .6em 4em; 
