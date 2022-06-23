@@ -610,6 +610,8 @@ ul.nav.navbar li a {
     font-family: 'Poppins', sans-serif;
     color: #d3d3d3;
     text-shadow: 0 1px 0 hsl(52deg 7% 20%), 0 2px 0 hsl(52deg 7% 18%), 0 3px 0 hsl(52deg 7% 16%), 0 4px 0 hsl(52deg 7% 14%), 0 5px 0 hsl(52deg 7% 12%), 0 6px 0 hsl(52deg 7% 10%), 0 7px 0 hsl(52deg 7% 8%), 0 8px 0 hsl(52deg 7% 6%), 0 0 5px rgb(0 0 0 / 5%), 0 1px 3px rgb(0 0 0 / 20%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 20%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 30%);
+    text-align: left;
+    width: 60px;
 }
 }
 .banner-text h1 {
