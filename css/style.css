@@ -603,8 +603,7 @@ ul.nav.navbar li a {
 }
 @media(max-width:800px){
 ul.nav.navbar li a {
-    font-size: 1.2em;
-    font-size: 3em;
+    font-size: 1.1em;
     /* text-align: left; */
     color: white;
     margin: 0 auto 2px;
