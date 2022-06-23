@@ -36,7 +36,7 @@ body a:hover{
 }
 /*-- top-nav --*/  
 .top-nav {
-    background:dodgerblue;
+    background:#ff8c1e;
 }
 .nav > li {
     display: inline-block;
@@ -132,7 +132,7 @@ width: 100%;
 	margin:4em auto;
 }
 .modal-content {
-    background: url(../images/bg.png) #000 repeat;
+    background: url(../images/.png) rgb(37, 36, 36) repeat;
 }
 .modal-body.modal-spa {
     padding: 0  1em 3em;
@@ -162,9 +162,30 @@ button.close {
     opacity: 1;
 }
 h4.modal-title {
-    font-size: 2.5em;
-    color: #fff;
-	text-align:center;
+    width: 60%;
+    max-width: 960px;
+    margin: 0 auto 20px;
+    color: white;
+    text-align:center;
+    font-size: 5rem;
+    line-height: 5rem;
+    transform: rotate(0deg);
+    text-shadow:  0 1px 0 hsl(52,7%,20%),
+    0 2px 0 hsl(52,7%,18%),
+    0 3px 0 hsl(52,7%,16%),
+    0 4px 0 hsl(52,7%,14%),
+    0 5px 0 hsl(52,7%,12%),
+    0 6px 0 hsl(52,7%,10%),
+    0 7px 0 hsl(52,7%,8%),
+    0 8px 0 hsl(52,7%,6%),
+
+    0 0 5px rgba(0,0,0,.05),
+    0 1px 3px rgba(0,0,0,.2),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.2),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.3);
+
 }
 /*-- //modal-basic --*/
 /*-- about --*/
@@ -235,7 +256,7 @@ p {
 }
 .bar-grids h4 {
     font-size: 1.6em;
-    color: #1dadd3;
+    color: #ff8c1e;
     margin-bottom: 1.5em;
     border-bottom: 1px dashed #484848;
     padding-bottom: 0.5em;
@@ -247,7 +268,7 @@ p {
 .progress {
     height: 20px;
     margin-bottom: 2.2em;
-    background-color: #484848;
+    background-color: #fbfcfca3;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	-o-border-radius: 0;
@@ -255,7 +276,7 @@ p {
     border-radius: 0;
 }
 .progress-bar { 
-    background-color: #424242;
+    background-color: chocolate;
 }
 .bar-grids h6 {
     font-size: 1em;
@@ -302,10 +323,10 @@ p {
 
 
 .experience-left h3 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
 }
 .experience-left h5 {
     font-size: 1em;
@@ -583,6 +604,14 @@ ul.nav.navbar li a {
 @media(max-width:800px){
 ul.nav.navbar li a {
     font-size: 1.2em;
+    font-size: 3em;
+    /* text-align: left; */
+    color: white;
+    margin: 0 auto 2px;
+    font-family: 'Poppins', sans-serif;
+    color: #d3d3d3;
+    text-shadow: 0 1px 0 hsl(52deg 7% 20%), 0 2px 0 hsl(52deg 7% 18%), 0 3px 0 hsl(52deg 7% 16%), 0 4px 0 hsl(52deg 7% 14%), 0 5px 0 hsl(52deg 7% 12%), 0 6px 0 hsl(52deg 7% 10%), 0 7px 0 hsl(52deg 7% 8%), 0 8px 0 hsl(52deg 7% 6%), 0 0 5px rgb(0 0 0 / 5%), 0 1px 3px rgb(0 0 0 / 20%), 0 3px 5px rgb(0 0 0 / 20%), 0 5px 10px rgb(0 0 0 / 20%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 30%);
+}
 }
 .banner-text h1 {
     font-size: 2.8em;
@@ -647,7 +676,10 @@ p.agile-br {
     border: none;
     box-shadow: none;
     position: absolute;
-    background: dodgerblue;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    
+    ;
     width: 100%;
     z-index: 9;
 
